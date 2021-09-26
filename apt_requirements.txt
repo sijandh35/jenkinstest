@@ -1,11 +1,12 @@
-python-dev
 binutils
+libproj-dev
+gdal-bin
 gettext
+libimage-exiftool-perl
+gcc
 make
 cmake
 wget
-gcc
 nano
 curl
 git
-g++ 
