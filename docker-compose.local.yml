@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  web:
+    env_file: .env   # Change env_sample.txt to env.txt
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+
+    external_links:        # For running services from external services
+      - "psql-naxa:db"
+      - "geoserver-naxa:geoserver"
+
