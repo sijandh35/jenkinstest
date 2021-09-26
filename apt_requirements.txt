@@ -1,8 +1,4 @@
-libpangocairo-1.0
-libpq-dev
 python-dev
-libproj-dev
-libc-dev
 binutils
 gettext
 make
@@ -12,6 +8,4 @@ gcc
 nano
 curl
 git
-gdal-bin
-libgdal-dev
 g++ 
