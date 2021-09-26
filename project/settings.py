@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'api',
     'django_extensions',
     'celery',
+    'debug_toolbar'
+    
 ]
 
 REST_FRAMEWORK = {

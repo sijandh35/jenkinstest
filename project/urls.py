@@ -22,6 +22,7 @@ from django.conf import settings
 from django.views.generic import TemplateView
 from django.contrib.auth import views as auth_view
 from rest_framework.authtoken import views
+import debug_toolbar
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -38,6 +39,7 @@ urlpatterns = [
     path('login/', auth_view.LoginView.as_view(), name='login'),
     path('logout/', auth_view.LogoutView.as_view(), name='logout'),
     path('api-token/', views.obtain_auth_token),
+    path('__debug__/', include(debug_toolbar.urls)),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
